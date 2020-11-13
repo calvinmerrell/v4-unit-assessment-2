@@ -36,7 +36,10 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(function(element,index,array){
+  return
 
+// }
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,6 +84,9 @@ const products = [
 */
 
 //CODE HERE
+let saleProducts = products.map(function (element) {
+  return element.price - (element.price * .25)
+})
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -92,14 +98,20 @@ const products = [
 
 //CODE HERE
 
+let blueProducts = products.filter(element => {
+  return element.color.includes("blue")
+}
+
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
   Use the reduce method to add up the prices of the blueProducts. 
   Save the result to a variable called orderTotal.
 */
-
 //CODE HERE
+const orderTotal = blueProducts.reduce(acc, element) => {
+  return acc += element.price
+},0)
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -130,6 +142,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const helensInfo = Object.assign(contactInfo,shippingInfo)
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +152,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const ellensInfo = (...helensInfo)
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,7 +160,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const {email} = ellensInfo;
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
@@ -154,7 +168,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+const {zipCode,state} = shippingInfo
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
   Use the userInfo object below to complete problems 9-11.
@@ -251,6 +265,29 @@ const userInfo = {
 */
 
 //CODE HERE
+const person = {
+    name: "John",
+    age: 12,
+    jobs: ["dishwasher","babySitter,homework"],
+    birthday: function() {this.name + 1},
+    favorites: {
+      color: "blue",
+      number: 35,
+      book: "hobbit",
+      kids: [
+              {
+                name: "kim",
+                age: 14
+              },
+              {
+                name: "jason",
+                age: 10
+              }
+            ]
+      }
+
+
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +313,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -288,7 +325,7 @@ function myFunc() {
   return this
 }
 
-//let context2 = myFunc
+let context2 = myFunc
 // let context2 = window
 //let context2 = global
 //let context2 = workout

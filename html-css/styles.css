@@ -1,3 +1,69 @@
+*{
+    margin 0;
+    padding 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: rgb(37, 37, 37);
+    width: 100vw;
+    height: 12vh;
+    list-style-type: none;
+    display: inline-block;  
+    }
+label.logo {
+    color: blue;
+    font-size: 35px;
+    line-height: 90px;
+    padding: 0 30px;
+    font-weight: bold;
+    }
+nav ul {
+    float: right;
+    margin-right: 10px;    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 50px;
+    color: white;
+    font-size: 20px;
+}
+.profile {
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 2px 30px rgba(102, 75, 75, .3) ;
+    float: right;
+}
+.docs {
+    width: 200px;
+    height: 300px;
+    box-shadow: 2px 2px 30px rgba(102, 75, 75, .3) ;
+    float: right;
+}
+.gallery {
+    width: 600px;
+    height: 200px;
+    border: solid 2px black;
+}
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: blue - rgb(42, 171, 226);
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 
 these are the colors used in the example
